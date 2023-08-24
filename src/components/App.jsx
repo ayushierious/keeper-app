@@ -17,7 +17,13 @@ function App(props) {
         <div>
             <Header />
             
-             {notes.map(createNote)}
+             {notes.map(noteItem=>
+               <Note
+                key={noteItem.key}
+                title={noteItem.title}
+                content={noteItem.content}
+              />
+             )}
 
             <Footer />
         </div>
